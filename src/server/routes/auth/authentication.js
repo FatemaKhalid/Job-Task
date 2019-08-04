@@ -17,7 +17,6 @@ router.post('/seedUser', (req, res) => {
     password: req.body.password
     
   });
-  console.log(req.body.password);
 
   user.save().then(() => {
     res.send('ok');
@@ -25,8 +24,6 @@ router.post('/seedUser', (req, res) => {
 });
 
 router.post('/getToken', (req, res) => {
-  console.log(process.env.POSTGRES_DATABASE_CONNECTION);
-  
     if (!req.body.email || !req.body.password) {
       return res.status(401).send('no fields');
     }
