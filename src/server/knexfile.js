@@ -4,36 +4,8 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgresql://localhost:5000/jwt_test'
+    connection: process.env.POSTGRES_DATABASE_CONNECTION
   },
-
-  staging: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
-  },
-
-  production: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
     migrations: {
       tableName: 'knex_migrations'
     }
