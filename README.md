@@ -5,9 +5,13 @@
 yarn install
 ```
 
-### To run the Client and Server 
+### To run the Server 
 ```
-nodejs server/index.js
+cd src/server
+nodejs index.js
+```
+### In another terminal run
+```
 yarn run serve
 ```
 
