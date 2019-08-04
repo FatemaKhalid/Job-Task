@@ -14,5 +14,11 @@ export default new Router({
             name: 'home',
             component: Home
         },
+
+        {
+            path: '/dashboard',
+            name: 'Dashboard',
+            component: () => import(/* webpackChunkName: "reservation" */ './views/Dashboard.vue')
+        },
     ]
 })

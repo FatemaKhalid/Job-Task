@@ -9,7 +9,7 @@
       <input name="email"  type="email" class="input email" placeholder="Email" v-model="email"/>      
       <input name="password" type="password" class="input password" placeholder="Password" v-model="password"/>
       <div class="checks">
-        <input type="checkbox" class="remeberMe" v-model="checked">
+        <input type="checkbox" class="remeberMe">
         <label class="remeberMe">Remember me</label>
         <a class="forgetPass">Forgot Password?</a>
       </div>
@@ -37,11 +37,7 @@ export default {
   },
   methods: {
     login(){
-		const user = new URLSearchParams();
-		user.append('email', this.email)
-		user.append('password', this.password)
-
-
+		this.$store.dispatch('loginUser', {email:this.email,password:this.password})
     }
   }
 }
