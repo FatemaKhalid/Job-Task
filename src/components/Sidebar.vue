@@ -28,11 +28,10 @@
 </template>
 
 <script>
-import { log } from 'util';
 export default {
   name: 'Sidebar',
   methods: {
-    toggleSidebar: function(event){
+    toggleSidebar: function(){
         document.querySelector('.sideBar').classList.toggle('active')
         
     }
