@@ -3,11 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAlignLeft, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faAlignLeft, faBars,  faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 
-library.add(faAlignLeft, faBars)
+library.add(faAlignLeft, faBars, faAngleDown)
  
 Vue.component('font-awesome-icon', FontAwesomeIcon)
  

@@ -3,10 +3,10 @@
     <ul class="navbar-nav">
       <li><a href="#">Accomodation</a></li>
       <li><a href="#">Transportation</a></li>
-      <li><a href="#">Tour Guides</a></li>
+      <li class="chose"><a href="#">Tour Guides</a></li>
       <li><a href="#">Sightseeig</a></li>
-      <li><a href="#">Flights</a></li>
-      <li><a href="#">Archived</a></li>
+      <li ><a href="#">Flights</a></li>
+      <li><a href="#">Archived  <font-awesome-icon v-on:click="toggleSidebar" icon="angle-down"/></a></li>
 
 
     </ul>
@@ -24,7 +24,6 @@ export default {
   float: right;
   text-align: left;
   background-color: #fff;
-  border-bottom: 1px solid #dfe9ec;
   transition: all ease 0.4s;
 }
 
@@ -32,20 +31,21 @@ export default {
   padding-left: 1vw;
 }
 .navbar-nav li {
+  padding: 2vh 1vw;
+  border-bottom: 1px solid #dfe9ec;
   display: inline-block;
-  width: 10vw;
+  width: 8vw;
 }
 
-.navbar .navbar-nav li a{
+.navbar-nav li a{
   font-size: 16px;
   color: #000;
   text-decoration: none;
 }
 
-/* Animation */
-.animate{
-  padding: 0px 10px 0px 0px;
-  transition: all ease 0.4s;
+.navbar-nav .chose {
+  border-bottom: 2px solid #0072AD;
+  font-weight: bold;
 }
 
 
