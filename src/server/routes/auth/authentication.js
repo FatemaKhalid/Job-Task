@@ -27,24 +27,25 @@ router.post('/getToken', (req, res) => {
     if (!req.body.email || !req.body.password) {
       return res.status(401).send('no fields');
     }
-    User.forge({ email: req.body.email }).fetch().then(result => {
-      if (!result) {
-        return res.status(400).send('user not found');
-      }
+    return res.status(200).send('ok');
+    // User.forge({ email: req.body.email }).fetch().then(result => {
+    //   if (!result) {
+    //     return res.status(400).send('user not found');
+    //   }
       
-      result.authenticate(req.body.password).then(user => {
-        const payload = { id: user.id };
-        const token = jwt.sign(payload, process.env.SECRET_OR_KEY);
-        res.send(token);
-      }).catch(err => {
-        return res.status(401).send({ err });
-      });
-    });
+    //   result.authenticate(req.body.password).then(user => {
+    //     const payload = { id: user.id };
+    //     const token = jwt.sign(payload, process.env.SECRET_OR_KEY);
+    //     res.send(token);
+    //   }).catch(err => {
+    //     return res.status(401).send({ err });
+    //   });
+    // });
   }
 );
 
-// router.get('/protected', passport.authenticate('jwt', { session: false }), (req, res) => {
-//   res.send('i\'m protected');
-// });
+router.get('/protected', passport.authenticate('jwt', { session: false }), (req, res) => {
+  res.send('i\'m protected');
+});
 
 module.exports = router;
