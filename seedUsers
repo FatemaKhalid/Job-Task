@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# curl -i -X POST -H 'Content-Type: application/json' -d '{"email": "guest@test.com", "password": "pass"}' http://localhost:5000/auth/seedUser
+# curl -i -X POST -H 'Content-Type: application/json' -d '{"email": "admin@test.com", "password": "pass"}' http://localhost:5000/auth/seedUser
+cd src/server/
+nodejs index.js&
+cd ../../

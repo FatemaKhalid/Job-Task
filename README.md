@@ -5,14 +5,15 @@
 yarn install
 ```
 
-### To run the Server 
+### To run the program 
 ```
-cd src/server
-nodejs index.js
+./runMe
 ```
-### In another terminal run
+### In another terminal run to create users
 ```
-yarn run serve
+curl -i -X POST -H 'Content-Type: application/json' -d '{"email": "guest@test.com", "password": "pass"}' http://localhost:5000/auth/seedUser
+curl -i -X POST -H 'Content-Type: application/json' -d '{"email": "admin@test.com", "password": "pass"}' http://localhost:5000/auth/seedUser
+
 ```
 
 ### Customize configuration
