@@ -36,31 +36,36 @@ export default new Vuex.Store({
         loginUser({ commit, state }, user) {
             axios.post('http://localhost:5000/auth/getToken', user)
             .then(response => {
+
+                let mail = user.email
+                if(mail.includes('guest'))
+                  localStorage.setItem('userRole', 'guest')
+                else if(mail.includes('admin'))
+                  localStorage.setItem('userRole', 'admin')
+                
                 commit('SET_TOKEN', response.data.token)
                 commit('SET_USER', response.data.user)
+
                 router.push({ name: 'Dashboard' })
             })
-            // .catch(error => {
-            //     commit('SET_INVALID_CREDENTIALS', '')
-            //     commit('SET_LOGIN_ERRORS', [])
-            //     console.log(error.response)
+            .catch(error => {
+                commit('SET_INVALID_CREDENTIALS', '')
+                commit('SET_LOGIN_ERRORS', [])
+                if(error.response.status == 400)
+                    alert('You are not registered!')
+                if(error.response.data.error) {
+                    commit('SET_INVALID_CREDENTIALS', error.response.data.error)
+                } else {
+                    const errors = []
 
-            //     if(error.response.data.error) {
-            //         commit('SET_INVALID_CREDENTIALS', error.response.data.error)
-            //     } else {
-            //         const errors = []
-
-            //         for (const key of Object.keys(error.response.data.errors)) {
-            //             error.response.data.errors[key].forEach(err =>{
-            //                 errors.push(err)
-            //             })
-            //         }
-
-            //         console.log(errors)
-
-            //         commit('SET_LOGIN_ERRORS', errors)
-            //     }
-            // });
+                    for (const key of Object.keys(error.response.data.errors)) {
+                        error.response.data.errors[key].forEach(err =>{
+                            errors.push(err)
+                        })
+                    }
+                    commit('SET_LOGIN_ERRORS', errors)
+                }
+            });
         },
     }
 })

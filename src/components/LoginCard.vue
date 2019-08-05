@@ -6,8 +6,8 @@
 		<h1>LOG IN</h1>
 		</div>
 		<div class="content">
-      <input name="email"  type="email" class="input email" placeholder="Email" v-model="email"/>      
-      <input name="password" type="password" class="input password" placeholder="Password" v-model="password"/>
+      <input name="email"  type="email" class="input email" placeholder="Email" v-model="email" required/>      
+      <input name="password" type="password" class="input password" placeholder="Password" v-model="password" required/>
       <div class="checks">
         <input type="checkbox" class="remeberMe">
         <label class="remeberMe">Remember me</label>

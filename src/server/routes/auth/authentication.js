@@ -32,13 +32,6 @@ router.post('/getToken', (req, res) => {
       if (!result) {
         return res.status(400).send('user not found');
       }
-      let mail = req.body.email
-      
-        if(mail.includes('guest'))
-          localStorage.setItem('userRole', 'guest')
-        else if(mail.includes('admin'))
-          localStorage.setItem('userRole', 'admin')
-      
       result.authenticate(req.body.password).then(user => {
         const payload = { id: user.id };
         const token = jwt.sign(payload, process.env.SECRET_OR_KEY);
