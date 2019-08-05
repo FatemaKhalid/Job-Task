@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAlignLeft, faBars,  faAngleDown, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faAlignLeft, faBars,  faAngleDown, faPlus, faDownload, faFilter } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import BootstrapVue from 'bootstrap-vue'
 
@@ -12,7 +12,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(BootstrapVue)
 
-library.add(faAlignLeft, faBars, faAngleDown, faPlus)
+library.add(faAlignLeft, faBars, faAngleDown, faPlus, faDownload, faFilter)
  
 Vue.component('font-awesome-icon', FontAwesomeIcon)
  

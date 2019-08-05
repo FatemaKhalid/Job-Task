@@ -77,6 +77,7 @@ body {
 	font-size: 13px;
 	font-weight: 400;
 	margin: 2em;
+    margin-left: 1em;
 	width: auto;
 	/* START - main table wrapper */
 	.main-table-wrapper {

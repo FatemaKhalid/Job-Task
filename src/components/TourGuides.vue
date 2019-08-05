@@ -1,23 +1,25 @@
 <template>
 <div class="tour-guides">
-    <div class="toolbar">
-        <!-- <b-button size="lg">Large Button</b-button> -->
-
-    </div>
+    <AdminTools/>
     <GuidesTable/>
 </div>
 </template>
 <script>
 import GuidesTable from './GuidesTable'
+import AdminTools from './AdminTools'
 export default {
     name:'TourGuides',
     components:{
-        GuidesTable
+        GuidesTable,
+        AdminTools,
     }, methods:{
 
     }
 }
 </script>
 <style scoped>
-
+.tour-guides {
+    width: 70vw;
+    float: right;
+}
 </style>
