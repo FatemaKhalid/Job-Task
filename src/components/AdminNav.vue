@@ -6,7 +6,7 @@
       <li class="chose"><a href="#">Tour Guides</a></li>
       <li><a href="#">Sightseeig</a></li>
       <li ><a href="#">Flights</a></li>
-      <li><a href="#">Archived  <font-awesome-icon v-on:click="toggleSidebar" icon="angle-down"/></a></li>
+      <li><a href="#">Archived  <font-awesome-icon icon="angle-down"/></a></li>
 
 
     </ul>

@@ -3,7 +3,7 @@
     <div class="toolbar">
 
     </div>
-    <!-- <GuidesTable/> -->
+    <GuidesTable/>
 </div>
 </template>
 <script>
@@ -13,7 +13,7 @@ export default {
     components:{
         GuidesTable
     }, methods:{
-        
+
     }
 }
 </script>

@@ -18,6 +18,7 @@ export default {
 <style scoped>
 .admin-board {
   margin-right: 10vw;
+  margin-left: 15vw;
   margin-top: 15vh;
 }
 </style>
