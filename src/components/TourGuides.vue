@@ -1,6 +1,7 @@
 <template>
 <div class="tour-guides">
     <div class="toolbar">
+        <!-- <b-button size="lg">Large Button</b-button> -->
 
     </div>
     <GuidesTable/>

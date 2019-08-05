@@ -1,10 +1,5 @@
 <template>
     <section class="md-ui component-data-table">
-	<!-- <header class="main-table-header">
-		<h1 class="table-header--title">Nutrition</h1>
-		<span class="table-header--icons"><i class="material-icons">filter_list</i><i class="material-icons">more_vert</i>
-		</span>
-	</header> -->
 	<div class="main-table-wrapper">
 		<table class="main-table-content">
 			<thead class="data-table-header">
@@ -22,7 +17,7 @@
 					<td class="table-datacell datatype-string name-td">{{guide.name}}</td>
 					<td class="table-datacell datatype-numeric">{{guide.number}}</td>
 					<td class="table-datacell datatype-numeric">{{guide.City}}</td>
-					<td class="table-datacell datatype-numeric">{{guide.Fees}}/td>
+					<td class="table-datacell datatype-numeric">{{guide.Fees}}</td>
 					<td class="table-datacell datatype-string"><input type="text" class="md-ui component-input data-table-input" placeholder="add a comment"></td>
 					<td class="table-datacell datatype-numeric"><a>Archive</a></td>
 				</tr>

@@ -1,6 +1,6 @@
 <template>
     <div class="sideBar">
-        <span class="content">
+        <span class="bar-content">
             <font-awesome-icon v-on:click="toggleSidebar" icon="bars" class="toggle-side-bar-btn" />
             <div class="iconImg"><img src="../assets/dashbarIcons/accomodation.png">
                 <span class="menuItem" href="#">Accomodation</span>
@@ -76,20 +76,20 @@ export default {
     font-size: 24px
 }
 
-.content .menuItem{
+.bar-content .menuItem{
     display: none;
     font-size: 18px;
     font-weight: 500;
 }
 
-.content .iconImg {
+.bar-content .iconImg {
     margin-bottom: 15px;
 }
 
 .iconImg img{
     width: 30px;
     display: inline-block;
-    padding: 5px 15px 0 5px ;
+    margin: 5px 15px 0 5px ;
     
  }
 
@@ -97,7 +97,7 @@ export default {
     width: 15vw;
 }
 
-.active .content{
+.active .bar-content{
     text-align: right;
     display: inline-block;
 }

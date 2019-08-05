@@ -71,11 +71,12 @@ export default {
     width: 20%;
     text-align: left;
     color: #0072AD;
-    font-weight: 900;
-    font-size: 2rem;
     background-color: #fff;
     border-bottom: 0;
     padding-left: 15px;
+    font-weight: 900;
+    font-size: 1.5rem;
+
 }
 .options {
     width: 35%;

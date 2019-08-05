@@ -1,6 +1,6 @@
 <template>
-<nav class="navbar">
-    <ul class="navbar-nav">
+<nav class="navigation">
+    <ul class="navList">
       <li><a href="#">Accomodation</a></li>
       <li><a href="#">Transportation</a></li>
       <li class="chose"><a href="#">Tour Guides</a></li>
@@ -19,7 +19,7 @@ export default {
 </script>
 <style scoped>
 
-.navbar{
+.navigation{
   width: 70vw;
   float: right;
   text-align: left;
@@ -27,23 +27,23 @@ export default {
   transition: all ease 0.4s;
 }
 
-.navbar-nav {
+.navList {
   padding-left: 1vw;
 }
-.navbar-nav li {
+.navList li {
   padding: 2vh 1vw;
   border-bottom: 1px solid #dfe9ec;
   display: inline-block;
-  width: 8vw;
+  width:10vw;
 }
 
-.navbar-nav li a{
+.navList li a{
   font-size: 16px;
   color: #000;
   text-decoration: none;
 }
 
-.navbar-nav .chose {
+.navList .chose {
   border-bottom: 2px solid #0072AD;
   font-weight: bold;
 }
