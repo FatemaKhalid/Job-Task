@@ -2,7 +2,7 @@ const User = require('../../models/user');
 const router = require('express').Router();
 const passport = require('../../config/passport');
 const jwt = require('jsonwebtoken');
-
+const localStorage = require('localStorage')
 router.get('/getUser', passport.authenticate('jwt', { session: false }), (req, res) => {
   return res.send(req.user);
 });
@@ -32,14 +32,19 @@ router.post('/getToken', (req, res) => {
       if (!result) {
         return res.status(400).send('user not found');
       }
+      let mail = req.body.email
+      
+        if(mail.includes('guest'))
+          localStorage.setItem('userRole', 'guest')
+        else if(mail.includes('admin'))
+          localStorage.setItem('userRole', 'admin')
       
       result.authenticate(req.body.password).then(user => {
         const payload = { id: user.id };
         const token = jwt.sign(payload, process.env.SECRET_OR_KEY);
         res.send(token);
       }).catch(err => {
-        console.log("user");
-        return res.status(402).send({ err });
+        return res.status(401).send({ err });
       });
     });
   }
