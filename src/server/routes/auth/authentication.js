@@ -38,7 +38,8 @@ router.post('/getToken', (req, res) => {
         const token = jwt.sign(payload, process.env.SECRET_OR_KEY);
         res.send(token);
       }).catch(err => {
-        return res.status(401).send({ err });
+        console.log("user");
+        return res.status(402).send({ err });
       });
     });
   }
