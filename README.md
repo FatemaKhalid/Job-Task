@@ -18,4 +18,3 @@ curl -i -X POST -H 'Content-Type: application/json' -d '{"email": "admin@test.co
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-job Task
