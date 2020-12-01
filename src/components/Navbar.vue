@@ -6,7 +6,9 @@
             <a class="tab close" href="#">Mohamed Yasser<br/><span>Manager</span></a>
             <div class="options">
                 <span>Agency Admin</span>
-                </div>
+                <span><img class="bar-img" src="../assets/dashbarIcons/user-3.png"> </span>
+                <span><img class="bar-img" src="../assets/dashbarIcons/arrow-up.png"> </span>
+            </div>
         </nav>
 </template>
 
@@ -83,13 +85,8 @@ export default {
     float: right;
     text-align: right;
 }
-.options:after {
-    content: "\f007  \f078";
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    color: #0072AD;
+.options .bar-img{
+    width: 1em;
     margin:  10px;
 }
 

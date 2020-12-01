@@ -25,7 +25,6 @@
 </template>
 
 <script>
-import { URLSearchParams } from 'url';
 // import BootstrapVue from 'bootstrap-vue'
 export default {
   name: 'LoginCard',

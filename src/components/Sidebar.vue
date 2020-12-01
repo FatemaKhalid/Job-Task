@@ -73,7 +73,8 @@ export default {
 .sideBar .toggle-side-bar-btn {
     margin:10px 10px 15vh 0px;
     color: #0072AD;
-    font-size: 24px
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .bar-content .menuItem{
@@ -84,6 +85,7 @@ export default {
 
 .bar-content .iconImg {
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .iconImg img{
